@@ -1,0 +1,100 @@
+name: 🔄 Auto-Update Tech Stack + Snake
+
+on:
+  schedule:
+    # Every day at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:   # Allow manual trigger
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_techstack.py'
+
+permissions:
+  contents: write
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────
+  #  JOB 1: Update tech stack JSON from live GitHub language data
+  # ─────────────────────────────────────────────────────────────────────────
+  update-techstack:
+    name: 📊 Update Tech Stack Data
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 🔄 Run tech stack updater
+        run: python scripts/update_techstack.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 💾 Commit updated data
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name  "github-actions[bot]"
+          git add techstack-data.json
+          git diff --staged --quiet || git commit -m "🔄 Auto-update tech stack data [$(date +'%Y-%m-%d')]"
+          git push
+
+  # ─────────────────────────────────────────────────────────────────────────
+  #  JOB 2: Re-generate contribution snake animation
+  # ─────────────────────────────────────────────────────────────────────────
+  update-snake:
+    name: 🐍 Regenerate Contribution Snake
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🐍 Generate snake SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg
+            dist/snake-dark.svg?palette=github-dark&color_snake=00d4aa&color_dots[0]=0d1f1a&color_dots[1]=0f3a2a&color_dots[2]=1d7a55&color_dots[3]=00d4aa&color_dots[4]=00ffcc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🚀 Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir:     dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ─────────────────────────────────────────────────────────────────────────
+  #  JOB 3: Deploy interactive tech stack page to GitHub Pages
+  # ─────────────────────────────────────────────────────────────────────────
+  deploy-pages:
+    name: 🌐 Deploy Tech Stack to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: update-techstack
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 📦 Inject live data into HTML
+        run: |
+          # Read updated JSON and inject into the HTML as inline data
+          if [ -f techstack-data.json ]; then
+            DATA=$(cat techstack-data.json)
+            # Replace placeholder in HTML if present
+            sed -i "s|// __INJECTED_DATA__|const LIVE_DATA = $DATA;|g" techstack-physics/index.html || true
+          fi
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir:  ./techstack-physics
+          publish_branch: gh-pages
+          destination_dir: techstack
+          commit_message: "🌐 Deploy tech stack page [$(date +'%Y-%m-%d')]"
