@@ -1,0 +1,339 @@
+{
+  "updated": "2026-03-16T12:24:06.413986Z",
+  "username": "rajkrish0608",
+  "lang_bytes": {
+    "Python": 83133104,
+    "TypeScript": 3564429,
+    "Cython": 3500340,
+    "C++": 1037078,
+    "C": 926337,
+    "Dart": 541828,
+    "JavaScript": 528304,
+    "HTML": 408818,
+    "CSS": 208826,
+    "GDScript": 165647,
+    "Rust": 50889,
+    "CMake": 40029,
+    "Fortran": 39766,
+    "Meson": 37362,
+    "PowerShell": 27447,
+    "Cuda": 24032,
+    "Shell": 21065,
+    "Jinja": 16352,
+    "HCL": 11765,
+    "PLpgSQL": 10124
+  },
+  "tech_stack": [
+    {
+      "name": "Python",
+      "domain": "AI / ML",
+      "r": 67,
+      "projects": [
+        "SellSenseAI",
+        "IoT Inventory Optimizer",
+        "Engineering Skills Radar"
+      ],
+      "bytes": 83133104
+    },
+    {
+      "name": "TensorFlow",
+      "domain": "AI / ML",
+      "r": 54,
+      "projects": [
+        "Swasth-AI",
+        "Medical image analysis pipeline"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "OpenCV",
+      "domain": "AI / ML",
+      "r": 46,
+      "projects": [
+        "Swasth-AI",
+        "Agri-Guard",
+        "Visual detection"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "scikit-learn",
+      "domain": "AI / ML",
+      "r": 45,
+      "projects": [
+        "SellSenseAI",
+        "Engineering Skills Radar"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "XGBoost",
+      "domain": "AI / ML",
+      "r": 40,
+      "projects": [
+        "SellSenseAI",
+        "Classification models"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "HuggingFace",
+      "domain": "AI / ML",
+      "r": 44,
+      "projects": [
+        "Swasth-AI",
+        "Legal-Clarity-AI",
+        "NLP pipelines"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Flask",
+      "domain": "AI / ML",
+      "r": 38,
+      "projects": [
+        "SellSenseAI",
+        "Agri-Guard",
+        "AI REST APIs"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Linux",
+      "domain": "Security",
+      "r": 52,
+      "projects": [
+        "ZenithOS",
+        "Raspberry Pi rover",
+        "Server hardening"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Cybersecurity",
+      "domain": "Security",
+      "r": 58,
+      "projects": [
+        "ZenithOS",
+        "Penetration testing",
+        "Network security"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "IoT / ESP32",
+      "domain": "Security",
+      "r": 50,
+      "projects": [
+        "IoT Inventory Optimizer",
+        "Health Monitor"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "C++",
+      "domain": "Security",
+      "r": 43,
+      "projects": [
+        "ZenithOS",
+        "Robotics rover",
+        "Embedded systems"
+      ],
+      "bytes": 1037078
+    },
+    {
+      "name": "Rust",
+      "domain": "Security",
+      "r": 43,
+      "projects": [
+        "ZenithOS kernel"
+      ],
+      "bytes": 50889
+    },
+    {
+      "name": "TypeScript",
+      "domain": "Web",
+      "r": 60,
+      "projects": [
+        "DataSaathi",
+        "WorkProof",
+        "HireFlow",
+        "ClipForge",
+        "BillSentry-Health"
+      ],
+      "bytes": 3564429
+    },
+    {
+      "name": "React",
+      "domain": "Web",
+      "r": 50,
+      "projects": [
+        "Final Portfolio",
+        "KINETIKA website",
+        "HireFlow"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Next.js",
+      "domain": "Web",
+      "r": 48,
+      "projects": [
+        "CivicGPT",
+        "Legal-Clarity-AI",
+        "LinkRaft"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Node.js",
+      "domain": "Web",
+      "r": 46,
+      "projects": [
+        "CivicGPT",
+        "HireFlow",
+        "msme-digital-backbone"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "MongoDB",
+      "domain": "Web",
+      "r": 42,
+      "projects": [
+        "HireFlow",
+        "CivicGPT",
+        "LinkRaft"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Flutter",
+      "domain": "Web",
+      "r": 49,
+      "projects": [
+        "Offline Survival Companion",
+        "Rent-Ledger"
+      ],
+      "bytes": 541828
+    },
+    {
+      "name": "JavaScript",
+      "domain": "Web",
+      "r": 42,
+      "projects": [
+        "My Portfolio",
+        "Govt-Notice-Checker",
+        "algo-nirman"
+      ],
+      "bytes": 528304
+    },
+    {
+      "name": "HTML / CSS",
+      "domain": "Web",
+      "r": 39,
+      "projects": [
+        "Agri-Guard",
+        "Vedic Asharam site"
+      ],
+      "bytes": 617644
+    },
+    {
+      "name": "Socket.io",
+      "domain": "Web",
+      "r": 38,
+      "projects": [
+        "Real-time apps",
+        "CivicGPT live features"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Git / GitHub",
+      "domain": "Tools",
+      "r": 48,
+      "projects": [
+        "All 49+ repositories"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Docker",
+      "domain": "Tools",
+      "r": 42,
+      "projects": [
+        "DataSaathi",
+        "Backend deployments"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Vercel",
+      "domain": "Tools",
+      "r": 40,
+      "projects": [
+        "Final Portfolio",
+        "CivicGPT",
+        "HireFlow"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Algorand",
+      "domain": "Tools",
+      "r": 46,
+      "projects": [
+        "DataSaathi \u2014 DPDP Act platform"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Solidity",
+      "domain": "Tools",
+      "r": 39,
+      "projects": [
+        "WorkProof",
+        "DataSaathi smart contracts"
+      ],
+      "bytes": 5410
+    },
+    {
+      "name": "Figma",
+      "domain": "Tools",
+      "r": 38,
+      "projects": [
+        "KINETIKA design",
+        "UI prototypes"
+      ],
+      "bytes": 0
+    },
+    {
+      "name": "Java",
+      "domain": "Tools",
+      "r": 36,
+      "projects": [
+        "GFG-160-Days-Challenge",
+        "DSA practice"
+      ],
+      "bytes": 254
+    },
+    {
+      "name": "Cython",
+      "domain": "Web",
+      "r": 41,
+      "projects": [
+        "Detected in repositories"
+      ],
+      "bytes": 3500340
+    },
+    {
+      "name": "C",
+      "domain": "Web",
+      "r": 33,
+      "projects": [
+        "Detected in repositories"
+      ],
+      "bytes": 926337
+    }
+  ]
+}
