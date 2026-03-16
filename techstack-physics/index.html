@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Krish — Tech Stack & Capabilities</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0d0d0f;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    user-select: none;
+  }
+
+  header {
+    padding: 40px 52px 0;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+  }
+
+  h1 span { color: #00c49a; }
+
+  .subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  .legend {
+    display: flex;
+    gap: 20px;
+    margin-top: 22px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+  .legend-item:hover { color: #aaa; }
+  .legend-item.active { color: #ccc; }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .canvas-wrapper {
+    margin: 18px 0 0;
+    position: relative;
+    border-top: 1px solid #1a1a22;
+    border-bottom: 1px solid #1a1a22;
+  }
+
+  canvas {
+    display: block;
+    cursor: default;
+  }
+
+  .hint {
+    text-align: center;
+    font-size: 11px;
+    color: #2a2a38;
+    padding: 10px;
+    letter-spacing: 2.5px;
+    font-family: 'JetBrains Mono', monospace;
+    background: #0d0d0f;
+  }
+
+  /* Tooltip */
+  #tooltip {
+    position: fixed;
+    background: #16161e;
+    border: 1px solid #2a2a38;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 13px;
+    pointer-events: none;
+    z-index: 9999;
+    display: none;
+    min-width: 180px;
+    max-width: 260px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.04);
+  }
+
+  .tt-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+    letter-spacing: -0.3px;
+  }
+
+  .tt-domain {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #444;
+    margin-bottom: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+  }
+
+  .tt-label {
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .tt-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .tt-project {
+    font-size: 12px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .tt-project::before {
+    content: '›';
+    color: #00c49a;
+    font-weight: 700;
+  }
+
+  /* Domain dot in tooltip */
+  .tt-dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  /* Reset button */
+  .reset-btn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: #1a1a22;
+    border: 1px solid #2a2a38;
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 10;
+  }
+  .reset-btn:hover { color: #aaa; border-color: #444; background: #20202a; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Tech Stack &amp; <span>Capabilities</span></h1>
+  <p class="subtitle">Each skill is linked to a project where it shipped — no percentage bars.</p>
+  <div class="legend">
+    <div class="legend-item active" data-domain="AI / ML">
+      <div class="legend-dot" style="background:#00c49a"></div>
+      AI / ML
+    </div>
+    <div class="legend-item active" data-domain="Web">
+      <div class="legend-dot" style="background:#4a4a6a"></div>
+      Web
+    </div>
+    <div class="legend-item active" data-domain="Security">
+      <div class="legend-dot" style="background:#9a5a22"></div>
+      Security
+    </div>
+    <div class="legend-item active" data-domain="Tools">
+      <div class="legend-dot" style="background:#3a3a4a"></div>
+      Tools
+    </div>
+  </div>
+</header>
+
+<div class="canvas-wrapper">
+  <button class="reset-btn" onclick="resetPhysics()">↺ RESET</button>
+  <canvas id="canvas"></canvas>
+</div>
+
+<div class="hint">HOVER = skill details &nbsp;·&nbsp; DRAG = physics interaction</div>
+
+<!-- Tooltip -->
+<div id="tooltip">
+  <div class="tt-name" id="tt-name"></div>
+  <div class="tt-domain" id="tt-domain"></div>
+  <div class="tt-label">Used in:</div>
+  <div class="tt-projects" id="tt-projects"></div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+//  TECH DATA
+// ─────────────────────────────────────────────────────────────────────────────
+const TECH_DATA = [
+  // AI / ML
+  { name: "Python",        domain: "AI / ML",   r: 62, projects: ["SellSenseAI", "IoT Inventory Optimizer", "Engineering Skills Radar", "Swasth-AI"] },
+  { name: "TensorFlow",    domain: "AI / ML",   r: 54, projects: ["Swasth-AI", "IoT Inventory Optimizer", "Medical image analysis"] },
+  { name: "OpenCV",        domain: "AI / ML",   r: 46, projects: ["Swasth-AI", "Agri-Guard", "Visual detection systems"] },
+  { name: "scikit-learn",  domain: "AI / ML",   r: 45, projects: ["SellSenseAI", "Engineering Skills Radar", "Data analysis pipelines"] },
+  { name: "XGBoost",       domain: "AI / ML",   r: 40, projects: ["SellSenseAI", "Classification models"] },
+  { name: "HuggingFace",   domain: "AI / ML",   r: 44, projects: ["Swasth-AI", "Legal-Clarity-AI", "NLP pipelines"] },
+  { name: "Flask",         domain: "AI / ML",   r: 38, projects: ["SellSenseAI", "Agri-Guard", "AI APIs"] },
+
+  // Security
+  { name: "Linux",         domain: "Security",  r: 52, projects: ["ZenithOS", "Raspberry Pi rover", "Server hardening"] },
+  { name: "Cybersecurity", domain: "Security",  r: 58, projects: ["ZenithOS", "Network security research", "Penetration testing"] },
+  { name: "IoT / ESP32",   domain: "Security",  r: 50, projects: ["IoT Inventory Optimizer", "Health Monitor", "Offline Companion"] },
+  { name: "C++",           domain: "Security",  r: 44, projects: ["ZenithOS", "Robotics rover", "Embedded systems"] },
+  { name: "Rust",          domain: "Security",  r: 46, projects: ["ZenithOS kernel", "Systems programming"] },
+
+  // Web
+  { name: "TypeScript",    domain: "Web",       r: 62, projects: ["DataSaathi", "WorkProof", "HireFlow", "ClipForge", "BillSentry-Health"] },
+  { name: "React",         domain: "Web",       r: 50, projects: ["Final Portfolio", "KINETIKA website", "HireFlow"] },
+  { name: "Next.js",       domain: "Web",       r: 48, projects: ["CivicGPT", "Legal-Clarity-AI", "LinkRaft", "msme-digital-backbone"] },
+  { name: "Node.js",       domain: "Web",       r: 46, projects: ["CivicGPT", "HireFlow", "Backend APIs"] },
+  { name: "MongoDB",       domain: "Web",       r: 42, projects: ["HireFlow", "CivicGPT", "LinkRaft"] },
+  { name: "Flutter",       domain: "Web",       r: 54, projects: ["Offline Survival Companion", "Rent-Ledger"] },
+  { name: "Socket.io",     domain: "Web",       r: 38, projects: ["Real-time apps", "CivicGPT live features"] },
+  { name: "JavaScript",    domain: "Web",       r: 44, projects: ["My Portfolio", "Govt-Notice-Checker", "algo-nirman website"] },
+  { name: "HTML / CSS",    domain: "Web",       r: 40, projects: ["Agri-Guard", "Vedic Asharam site"] },
+
+  // Tools
+  { name: "Git / GitHub",  domain: "Tools",     r: 48, projects: ["All 49+ repositories"] },
+  { name: "Docker",        domain: "Tools",     r: 42, projects: ["DataSaathi", "Backend deployments"] },
+  { name: "Vercel",        domain: "Tools",     r: 40, projects: ["Final Portfolio", "CivicGPT", "HireFlow"] },
+  { name: "Algorand",      domain: "Tools",     r: 46, projects: ["DataSaathi — DPDP Act platform"] },
+  { name: "Solidity",      domain: "Tools",     r: 40, projects: ["WorkProof", "DataSaathi smart contracts"] },
+  { name: "Figma",         domain: "Tools",     r: 38, projects: ["KINETIKA website design", "UI prototypes"] },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  DOMAIN COLOR SCHEME — matched to reference image
+// ─────────────────────────────────────────────────────────────────────────────
+const COLORS = {
+  "AI / ML":   { fill: "#0d2e24", stroke: "#00c49a", textPrimary: "#00c49a",  textSecondary: "#007a5e" },
+  "Security":  { fill: "#2a1400", stroke: "#9a5a22", textPrimary: "#c47832",  textSecondary: "#7a4218" },
+  "Web":       { fill: "#13131e", stroke: "#3a3a5a", textPrimary: "#6a6a9a",  textSecondary: "#3a3a5a" },
+  "Tools":     { fill: "#111118", stroke: "#2a2a3a", textPrimary: "#505060",  textSecondary: "#2a2a38" },
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  CANVAS SETUP
+// ─────────────────────────────────────────────────────────────────────────────
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let W = 0, H = 0;
+
+function setSize() {
+  W = document.body.clientWidth;
+  H = Math.max(460, Math.min(580, window.innerHeight * 0.62));
+  canvas.width = W;
+  canvas.height = H;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  PHYSICS BODIES
+// ─────────────────────────────────────────────────────────────────────────────
+const GRAVITY   = 0.38;
+const DAMPING   = 0.52;   // bounce restitution
+const FRICTION  = 0.94;   // horizontal drag
+const SLEEP_V   = 0.35;   // velocity threshold for sleeping
+const SLEEP_FRAMES = 25;  // frames below threshold before sleep
+
+let bodies = [];
+let dragging = null;
+let dragPrevX = 0, dragPrevY = 0;
+let dragVX = 0, dragVY = 0;
+
+function makeBodies() {
+  bodies = TECH_DATA.map((t) => ({
+    x:   t.r + 20 + Math.random() * Math.max(40, W - t.r * 2 - 40),
+    y:   -(t.r + Math.random() * H * 2.2),   // spawn above viewport
+    vx:  (Math.random() - 0.5) * 4,
+    vy:  Math.random() * 3 + 1,
+    r:   t.r,
+    tech: t,
+    sleeping:   false,
+    sleepCount: 0,
+    alpha:      0,           // fade-in
+  }));
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  COLLISION RESOLUTION
+// ─────────────────────────────────────────────────────────────────────────────
+function resolveCollision(a, b) {
+  const dx  = b.x - a.x;
+  const dy  = b.y - a.y;
+  const d2  = dx*dx + dy*dy;
+  const min = a.r + b.r;
+
+  if (d2 >= min*min || d2 < 0.001) return;
+
+  const dist = Math.sqrt(d2);
+  const nx = dx / dist;
+  const ny = dy / dist;
+  const overlap = min - dist;
+
+  // Push apart (mass proportional to area = r²)
+  const aM = a.r * a.r, bM = b.r * b.r, tM = aM + bM;
+  if (a !== dragging) { a.x -= nx * overlap * (bM/tM); a.y -= ny * overlap * (bM/tM); }
+  if (b !== dragging) { b.x += nx * overlap * (aM/tM); b.y += ny * overlap * (aM/tM); }
+
+  // Velocity impulse
+  const dvx = b.vx - a.vx;
+  const dvy = b.vy - a.vy;
+  const dot = dvx*nx + dvy*ny;
+  if (dot >= 0) return;
+
+  const rest = 0.45;
+  const imp  = -(1 + rest) * dot / (1/aM + 1/bM);
+
+  if (a !== dragging) { a.vx -= imp/aM * nx;  a.vy -= imp/aM * ny; }
+  if (b !== dragging) { b.vx += imp/bM * nx;  b.vy += imp/bM * ny; }
+
+  a.sleeping = false;  a.sleepCount = 0;
+  b.sleeping = false;  b.sleepCount = 0;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  STEP
+// ─────────────────────────────────────────────────────────────────────────────
+function step() {
+  for (const b of bodies) {
+    // fade in
+    b.alpha = Math.min(1, b.alpha + 0.025);
+
+    if (b === dragging || b.sleeping) continue;
+
+    b.vy  += GRAVITY;
+    b.vx  *= FRICTION;
+    b.x   += b.vx;
+    b.y   += b.vy;
+
+    // Floor
+    if (b.y + b.r >= H) {
+      b.y   = H - b.r;
+      b.vy *= -DAMPING;
+      b.vx *= 0.82;
+      if (Math.abs(b.vy) < SLEEP_V && Math.abs(b.vx) < SLEEP_V) {
+        b.sleepCount++;
+        if (b.sleepCount > SLEEP_FRAMES) { b.sleeping = true; b.vx = 0; b.vy = 0; }
+      } else { b.sleepCount = 0; }
+    }
+
+    // Walls
+    if (b.x - b.r < 0)  { b.x = b.r;    b.vx =  Math.abs(b.vx) * DAMPING; }
+    if (b.x + b.r > W)  { b.x = W - b.r; b.vx = -Math.abs(b.vx) * DAMPING; }
+    if (b.y - b.r < 0)  { b.y = b.r;    b.vy =  Math.abs(b.vy) * DAMPING; }
+  }
+
+  // Collision passes (2 iterations for stability)
+  for (let pass = 0; pass < 2; pass++) {
+    for (let i = 0; i < bodies.length; i++) {
+      for (let j = i+1; j < bodies.length; j++) {
+        resolveCollision(bodies[i], bodies[j]);
+      }
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  DRAW
+// ─────────────────────────────────────────────────────────────────────────────
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#0d0d0f';
+  ctx.fillRect(0, 0, W, H);
+
+  for (const b of bodies) {
+    if (b.y + b.r < -10) continue;   // still off screen
+
+    const c = COLORS[b.tech.domain];
+    const isHov = b === hoveredBody;
+    const aDrag = b === dragging;
+
+    ctx.save();
+    ctx.globalAlpha = b.alpha;
+
+    // Glow ring on hover
+    if (isHov || aDrag) {
+      ctx.beginPath();
+      ctx.arc(b.x, b.y, b.r + 6, 0, Math.PI*2);
+      const grd = ctx.createRadialGradient(b.x, b.y, b.r, b.x, b.y, b.r + 8);
+      grd.addColorStop(0, c.stroke + '55');
+      grd.addColorStop(1, c.stroke + '00');
+      ctx.fillStyle = grd;
+      ctx.fill();
+    }
+
+    // Circle body
+    ctx.beginPath();
+    ctx.arc(b.x, b.y, b.r, 0, Math.PI*2);
+    ctx.fillStyle = c.fill;
+    ctx.fill();
+
+    // Border
+    ctx.strokeStyle = isHov ? c.textPrimary : c.stroke;
+    ctx.lineWidth   = isHov ? 1.5 : 1;
+    ctx.stroke();
+
+    // Name text
+    const fontSize = Math.max(10, Math.min(15, b.r * 0.27));
+    ctx.font = `600 ${fontSize}px Inter, -apple-system, sans-serif`;
+    ctx.fillStyle   = c.textPrimary;
+    ctx.textAlign   = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(b.tech.name, b.x, b.y - fontSize * 0.5);
+
+    // Domain sub-label
+    const subSize = Math.max(8, fontSize - 3.5);
+    ctx.font = `400 ${subSize}px Inter, -apple-system, sans-serif`;
+    ctx.fillStyle = c.stroke;
+    ctx.fillText(b.tech.domain.split('/')[0].trim(), b.x, b.y + fontSize * 0.7);
+
+    ctx.restore();
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  HOVER & TOOLTIP
+// ─────────────────────────────────────────────────────────────────────────────
+let hoveredBody = null;
+const tooltip   = document.getElementById('tooltip');
+
+function getBodyAt(x, y) {
+  for (let i = bodies.length-1; i >= 0; i--) {
+    const b = bodies[i];
+    const dx = x - b.x, dy = y - b.y;
+    if (dx*dx + dy*dy <= b.r*b.r) return b;
+  }
+  return null;
+}
+
+let mousePageX = 0, mousePageY = 0;
+
+function updateTooltip(b) {
+  if (!b) { tooltip.style.display = 'none'; return; }
+
+  document.getElementById('tt-name').textContent = b.tech.name;
+  const domEl = document.getElementById('tt-domain');
+  domEl.innerHTML = `<span class="tt-dot" style="background:${COLORS[b.tech.domain].stroke}"></span>DOMAIN: ${b.tech.domain}`;
+  
+  const projEl = document.getElementById('tt-projects');
+  projEl.innerHTML = b.tech.projects.map(p =>
+    `<div class="tt-project">${p}</div>`
+  ).join('');
+
+  tooltip.style.display = 'block';
+
+  const ttW = tooltip.offsetWidth || 220;
+  const ttH = tooltip.offsetHeight || 120;
+  let tx = mousePageX + 18;
+  let ty = mousePageY - ttH/2;
+  if (tx + ttW > window.innerWidth  - 10) tx = mousePageX - ttW - 18;
+  if (ty < 8)                             ty = 8;
+  if (ty + ttH > window.innerHeight - 8)  ty = window.innerHeight - ttH - 8;
+
+  tooltip.style.left = tx + 'px';
+  tooltip.style.top  = ty + 'px';
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  MOUSE EVENTS
+// ─────────────────────────────────────────────────────────────────────────────
+function canvasXY(e) {
+  const rect   = canvas.getBoundingClientRect();
+  const scaleX = canvas.width  / rect.width;
+  const scaleY = canvas.height / rect.height;
+  return [(e.clientX - rect.left) * scaleX, (e.clientY - rect.top) * scaleY];
+}
+
+canvas.addEventListener('mousemove', e => {
+  const [cx, cy] = canvasXY(e);
+  mousePageX = e.clientX;
+  mousePageY = e.clientY;
+
+  if (dragging) {
+    dragVX = cx - dragPrevX;
+    dragVY = cy - dragPrevY;
+    dragPrevX = cx;
+    dragPrevY = cy;
+    dragging.x = cx - dragOffX;
+    dragging.y = cy - dragOffY;
+    return;
+  }
+
+  const b = getBodyAt(cx, cy);
+  hoveredBody = b;
+  canvas.style.cursor = b ? 'grab' : 'default';
+  updateTooltip(b);
+});
+
+let dragOffX = 0, dragOffY = 0;
+
+canvas.addEventListener('mousedown', e => {
+  const [cx, cy] = canvasXY(e);
+  const b = getBodyAt(cx, cy);
+  if (!b) return;
+  dragging   = b;
+  dragOffX   = cx - b.x;
+  dragOffY   = cy - b.y;
+  dragPrevX  = cx;
+  dragPrevY  = cy;
+  dragVX = dragVY = 0;
+  b.sleeping = false;
+  canvas.style.cursor = 'grabbing';
+  updateTooltip(null);
+});
+
+canvas.addEventListener('mouseup', () => {
+  if (dragging) {
+    dragging.vx = dragVX * 0.6;
+    dragging.vy = dragVY * 0.6;
+    dragging.sleeping   = false;
+    dragging.sleepCount = 0;
+    dragging = null;
+  }
+  canvas.style.cursor = hoveredBody ? 'grab' : 'default';
+});
+
+canvas.addEventListener('mouseleave', () => {
+  hoveredBody = null;
+  if (dragging) {
+    dragging.vx = dragVX * 0.5;
+    dragging.vy = dragVY * 0.5;
+    dragging.sleeping = false;
+    dragging = null;
+  }
+  updateTooltip(null);
+});
+
+// Touch support
+canvas.addEventListener('touchstart', e => {
+  e.preventDefault();
+  const t = e.touches[0];
+  const [cx, cy] = canvasXY(t);
+  const b = getBodyAt(cx, cy);
+  if (!b) return;
+  dragging = b; dragOffX = cx - b.x; dragOffY = cy - b.y;
+  dragPrevX = cx; dragPrevY = cy; dragVX = dragVY = 0;
+  b.sleeping = false;
+}, { passive: false });
+
+canvas.addEventListener('touchmove', e => {
+  e.preventDefault();
+  if (!dragging) return;
+  const t = e.touches[0];
+  const [cx, cy] = canvasXY(t);
+  dragVX = cx - dragPrevX; dragVY = cy - dragPrevY;
+  dragPrevX = cx; dragPrevY = cy;
+  dragging.x = cx - dragOffX;
+  dragging.y = cy - dragOffY;
+}, { passive: false });
+
+canvas.addEventListener('touchend', e => {
+  e.preventDefault();
+  if (dragging) {
+    dragging.vx = dragVX * 0.5; dragging.vy = dragVY * 0.5;
+    dragging.sleeping = false; dragging = null;
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  LEGEND FILTER
+// ─────────────────────────────────────────────────────────────────────────────
+const activeDomains = new Set(["AI / ML", "Web", "Security", "Tools"]);
+
+document.querySelectorAll('.legend-item').forEach(el => {
+  el.addEventListener('click', () => {
+    const domain = el.dataset.domain;
+    el.classList.toggle('active');
+    // visual feedback only (bodies still exist)
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  RESET
+// ─────────────────────────────────────────────────────────────────────────────
+function resetPhysics() {
+  dragging = null;
+  hoveredBody = null;
+  updateTooltip(null);
+  makeBodies();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  MAIN LOOP
+// ─────────────────────────────────────────────────────────────────────────────
+function loop() {
+  step();
+  draw();
+  requestAnimationFrame(loop);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  INIT
+// ─────────────────────────────────────────────────────────────────────────────
+setSize();
+makeBodies();
+loop();
+
+window.addEventListener('resize', () => {
+  setSize();
+  for (const b of bodies) {
+    if (b.x - b.r < 0) b.x = b.r;
+    if (b.x + b.r > W) b.x = W - b.r;
+    if (b.y + b.r > H) { b.y = H - b.r; }
+  }
+});
+</script>
+</body>
+</html>
