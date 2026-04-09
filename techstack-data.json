@@ -1,20 +1,20 @@
 {
-  "updated": "2026-04-08T07:04:17.949631Z",
+  "updated": "2026-04-09T07:08:21.177164Z",
   "username": "rajkrish0608",
   "lang_bytes": {
     "Python": 83370218,
     "TypeScript": 3808275,
     "Cython": 3500340,
-    "C++": 1037078,
-    "C": 926337,
-    "Dart": 541828,
+    "C++": 1062681,
+    "C": 927825,
+    "Dart": 659532,
     "JavaScript": 535565,
-    "HTML": 413116,
+    "HTML": 414823,
     "CSS": 212128,
     "GDScript": 165647,
+    "CMake": 59835,
     "Rust": 50889,
     "PLpgSQL": 41689,
-    "CMake": 40029,
     "Fortran": 39766,
     "Meson": 37362,
     "PowerShell": 27447,
@@ -139,7 +139,7 @@
         "Robotics rover",
         "Embedded systems"
       ],
-      "bytes": 1037078
+      "bytes": 1062681
     },
     {
       "name": "Rust",
@@ -215,7 +215,7 @@
         "Offline Survival Companion",
         "Rent-Ledger"
       ],
-      "bytes": 541828
+      "bytes": 659532
     },
     {
       "name": "JavaScript",
@@ -236,7 +236,7 @@
         "Agri-Guard",
         "Vedic Asharam site"
       ],
-      "bytes": 625244
+      "bytes": 626951
     },
     {
       "name": "Socket.io",
@@ -333,7 +333,7 @@
       "projects": [
         "Detected in repositories"
       ],
-      "bytes": 926337
+      "bytes": 927825
     }
   ]
 }
