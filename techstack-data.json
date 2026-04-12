@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-11T06:45:47.036433Z",
+  "updated": "2026-04-12T07:01:46.223494Z",
   "username": "rajkrish0608",
   "lang_bytes": {
     "Python": 83370218,
@@ -8,9 +8,9 @@
     "C++": 1062681,
     "C": 927825,
     "Dart": 659532,
-    "JavaScript": 558371,
-    "HTML": 425523,
-    "CSS": 222898,
+    "JavaScript": 591180,
+    "HTML": 426197,
+    "CSS": 228106,
     "GDScript": 165647,
     "CMake": 59835,
     "Rust": 50889,
@@ -226,7 +226,7 @@
         "Govt-Notice-Checker",
         "algo-nirman"
       ],
-      "bytes": 558371
+      "bytes": 591180
     },
     {
       "name": "HTML / CSS",
@@ -236,7 +236,7 @@
         "Agri-Guard",
         "Vedic Asharam site"
       ],
-      "bytes": 648421
+      "bytes": 654303
     },
     {
       "name": "Socket.io",
