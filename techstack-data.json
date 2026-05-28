@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T08:56:39.110199Z",
+  "updated": "2026-05-28T09:40:28.933854Z",
   "username": "rajkrish0608",
   "lang_bytes": {
     "Python": 83370218,
@@ -8,7 +8,7 @@
     "C++": 1062681,
     "C": 927825,
     "Dart": 659532,
-    "JavaScript": 591180,
+    "JavaScript": 591507,
     "HTML": 426197,
     "CSS": 228106,
     "GDScript": 165647,
@@ -226,7 +226,7 @@
         "Govt-Notice-Checker",
         "algo-nirman"
       ],
-      "bytes": 591180
+      "bytes": 591507
     },
     {
       "name": "HTML / CSS",
