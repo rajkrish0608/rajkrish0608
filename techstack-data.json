@@ -1,9 +1,9 @@
 {
-  "updated": "2026-05-31T08:31:41.132245Z",
+  "updated": "2026-06-01T11:03:17.429854Z",
   "username": "rajkrish0608",
   "lang_bytes": {
     "Python": 83376498,
-    "TypeScript": 4093421,
+    "TypeScript": 4092866,
     "Cython": 3500340,
     "C++": 1062681,
     "C": 927825,
@@ -161,7 +161,7 @@
         "ClipForge",
         "BillSentry-Health"
       ],
-      "bytes": 4093421
+      "bytes": 4092866
     },
     {
       "name": "React",
