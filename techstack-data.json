@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T11:03:17.429854Z",
+  "updated": "2026-06-02T09:57:21.876789Z",
   "username": "rajkrish0608",
   "lang_bytes": {
     "Python": 83376498,
@@ -9,7 +9,7 @@
     "C": 927825,
     "JavaScript": 713946,
     "Dart": 659532,
-    "HTML": 426197,
+    "HTML": 473621,
     "CSS": 237531,
     "GDScript": 165647,
     "CMake": 59835,
@@ -236,7 +236,7 @@
         "Agri-Guard",
         "Vedic Asharam site"
       ],
-      "bytes": 663728
+      "bytes": 711152
     },
     {
       "name": "Socket.io",
