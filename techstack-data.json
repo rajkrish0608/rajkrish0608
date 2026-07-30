@@ -1,16 +1,16 @@
 {
-  "updated": "2026-07-29T08:14:34.624522Z",
+  "updated": "2026-07-30T08:02:52.826121Z",
   "username": "rajkrish0608",
   "lang_bytes": {
     "Python": 83377646,
-    "TypeScript": 4257314,
+    "TypeScript": 4595542,
     "Cython": 3500340,
     "C++": 1062681,
     "C": 927825,
-    "JavaScript": 778485,
+    "JavaScript": 779735,
     "Dart": 659532,
     "HTML": 546228,
-    "CSS": 252239,
+    "CSS": 260583,
     "GDScript": 165647,
     "CMake": 59835,
     "Rust": 50889,
@@ -161,7 +161,7 @@
         "ClipForge",
         "BillSentry-Health"
       ],
-      "bytes": 4257314
+      "bytes": 4595542
     },
     {
       "name": "React",
@@ -226,7 +226,7 @@
         "Govt-Notice-Checker",
         "algo-nirman"
       ],
-      "bytes": 778485
+      "bytes": 779735
     },
     {
       "name": "HTML / CSS",
@@ -236,7 +236,7 @@
         "Agri-Guard",
         "Vedic Asharam site"
       ],
-      "bytes": 798467
+      "bytes": 806811
     },
     {
       "name": "Socket.io",
