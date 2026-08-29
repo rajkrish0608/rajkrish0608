@@ -1,16 +1,16 @@
 {
-  "updated": "2026-08-28T17:47:41.004563Z",
+  "updated": "2026-08-29T11:52:04.664405Z",
   "username": "rajkrish0608",
   "lang_bytes": {
-    "Python": 83382418,
-    "TypeScript": 5864445,
+    "Python": 83387190,
+    "TypeScript": 7007045,
     "Cython": 3500340,
     "C++": 1062681,
     "C": 927825,
-    "JavaScript": 835532,
+    "JavaScript": 836328,
     "Dart": 659532,
-    "HTML": 550545,
-    "CSS": 300275,
+    "HTML": 553833,
+    "CSS": 312623,
     "GDScript": 165647,
     "CMake": 59835,
     "Rust": 50889,
@@ -33,7 +33,7 @@
         "IoT Inventory Optimizer",
         "Engineering Skills Radar"
       ],
-      "bytes": 83382418
+      "bytes": 83387190
     },
     {
       "name": "TensorFlow",
@@ -153,7 +153,7 @@
     {
       "name": "TypeScript",
       "domain": "Web",
-      "r": 63,
+      "r": 65,
       "projects": [
         "DataSaathi",
         "WorkProof",
@@ -161,7 +161,7 @@
         "ClipForge",
         "BillSentry-Health"
       ],
-      "bytes": 5864445
+      "bytes": 7007045
     },
     {
       "name": "React",
@@ -226,7 +226,7 @@
         "Govt-Notice-Checker",
         "algo-nirman"
       ],
-      "bytes": 835532
+      "bytes": 836328
     },
     {
       "name": "HTML / CSS",
@@ -236,7 +236,7 @@
         "Agri-Guard",
         "Vedic Asharam site"
       ],
-      "bytes": 850820
+      "bytes": 866456
     },
     {
       "name": "Socket.io",
